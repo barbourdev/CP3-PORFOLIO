@@ -90,11 +90,6 @@ const fetchUserRepos = async (username: string) => {
                 <FaGithub size={30} className="text-slate-500 hover:text-black transition duration-300" />
               </a>
             </div>
-            <div className="p-5 mt-5 flex flex-col gap-2 border-t-2 w-full items-center">
-                <Link href={`/fiap/${nome}`} className="hover:text-red-600">
-                    <p className="font-semibold">Repositório FIAP</p>
-                </Link>
-            </div>
           </div>
 
           {/* Main Content */}
