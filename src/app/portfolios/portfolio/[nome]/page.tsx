@@ -81,7 +81,9 @@ const fetchUserRepos = async (username: string) => {
         <div className="flex flex-col md:flex-row bg-gray-100">
           {/* Sidebar */}
           <div className="w-full md:w-1/6 bg-white flex flex-col items-center p-8 md:sticky md:top-0">
-            <Image src={userAvatar} alt="User Avatar" width={100} height={100} className="rounded-full mb-4" priority />
+            {userAvatar && (
+              <Image src={userAvatar} alt="User Avatar" width={100} height={100} className="rounded-full mb-4" priority />
+            )}
             <h1 className="text-2xl font-semibold text-center">{nome}</h1>
             <div className="flex space-x-4 mt-5">
               <a href={`https://github.com/${nome}`} target="_blank" rel="noopener noreferrer">

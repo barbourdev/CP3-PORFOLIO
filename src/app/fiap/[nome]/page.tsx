@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 export default function Fiap({ params }: { params: Promise<{ nome: string }> }) {
   const [nome, setNome] = useState<string | null>(null);
-  const [atividades, setAtividades] = useState([]);
+  const [atividades, setAtividades] = useState<{ id: string; nome: string; dataEntrega: string; nota: string; feedback: string }[]>([]);
   const [novaAtividade, setNovaAtividade] = useState({ nome: "", dataEntrega: "", nota: "", feedback: "" });
 
   useEffect(() => {

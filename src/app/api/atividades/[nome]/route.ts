@@ -5,7 +5,7 @@ export async function GET(request: Request, context: { params: { nome: string } 
     const { nome } = await context.params;
     const file = await fs.readFile(process.cwd() + "/src/data/base.json", "utf-8");
     const dados = JSON.parse(file);
-    const user = dados.find((user: { user: string }) => user.nome === nome);
+    const user = dados.find((user: { nome: string }) => user.nome === nome);
     return NextResponse.json(user ? user.atividades : []);
 }
 

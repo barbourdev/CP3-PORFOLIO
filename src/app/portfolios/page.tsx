@@ -12,7 +12,7 @@ const githubUsers = [
 ];
 
 export default function Portfolios() {
-  const [userData, setUserData] = useState([]);
+  const [userData, setUserData] = useState<any[]>([]);
 
   useEffect(() => {
     // Função para buscar dados dos usuários do GitHub
